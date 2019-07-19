@@ -1,0 +1,20 @@
+
+# TargetBoard
+yogorobot@kago5-a
+
+==========================================================================================================================================
+# 4G模块
+Neoway 有方
+**N720**
+
+# 说明
+驱动适配成功后，在/dev/目录下可以发现 ttyUSB0/ttyUSB1/ttyUSB2/ttyUSB3/ttyUSB4/
+N720有不同版本
+idVendor=2949,idProduct=8241/8243/8247...  
+不同版本，ttyUSBx端口数量不一致:
+(If five USB ports are displayed, AT commands are sent through USB0 and USB2. USB0 is the modem port and USB2 is the AT port.)    
+5个端口的 USB0 and USB2 可用于AT命令,USB0作为modem,USB2为AT专用端口。  
+(If six USB ports are displayed, AT commands are sent through USB1 and USB3. USB1 is the modem port and USB3 is the AT port.)  
+6个端口的 USB1 and USB3 可用于AT命令,USB1作为modem,USB3为AT专用端口。  
+**ps: 作为modem时，使用pppd播号后，对应ttyUSBx端口会处于lock状态，即无法使用**
+
